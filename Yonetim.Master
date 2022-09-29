@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Yonetim.master.cs" Inherits="_1912901026_AraSinav.Yonetim" %>
+
+<%@ Register Src="~/UserControl/UyeGiris.ascx" TagPrefix="uc1" TagName="UyeGiris" %>
+<%@ Register Src="~/UserControl/YönetimMenu.ascx" TagPrefix="uc1" TagName="YönetimMenu" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Stil.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <table class="anaTablo">
+                <tr>
+                    <td colspan="2" class="anaCerceve">
+                        <asp:Image ID="ImageBanner" runat="server" Height="150px" ImageUrl="~/Image/tm.jpg" Width="100%" />
+                    </td>
+                    <td colspan="2" class="anaCerceve">
+                        <uc1:UyeGiris runat="server" ID="UyeGiris" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="anaCerceve anaTabloMenu">
+                        <uc1:YönetimMenu runat="server" ID="YönetimMenu" />
+                    </td>
+                    <td class="anaCerceve icerik">
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                         </asp:ContentPlaceHolder>                       
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
